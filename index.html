@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarketScout for Meta Quest</title>
+<meta name="description" content="Explore 3,939 public companies as planets in a universe you shape with your hands. A seated research tool for Meta Quest.">
+<meta property="og:title" content="MarketScout for Meta Quest">
+<meta property="og:description" content="Explore 3,939 public companies as planets in a universe you shape with your hands.">
+<meta property="og:image" content="https://geoscout-ai.github.io/MarketScout-VR/media/poster.jpg">
+<meta name="theme-color" content="#05080d">
+<style>
+  :root {
+    --bg: #05080d;
+    --panel: #0c131c;
+    --line: #1c2a38;
+    --text: #e6edf3;
+    --muted: #9fb0c0;
+    --accent: #6fe3d1;
+    --warm: #f2b45c;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg) radial-gradient(ellipse 80% 50% at 50% 0%, #0f2030 0%, transparent 70%) no-repeat;
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 56px 0 28px; text-align: center; }
+  .eyebrow {
+    margin: 0 0 10px; color: var(--accent);
+    font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+  }
+  h1 { margin: 0; font-size: clamp(40px, 8vw, 64px); line-height: 1.05; letter-spacing: -.02em; }
+  .lede { max-width: 620px; margin: 16px auto 0; color: var(--muted); font-size: 19px; }
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .badge {
+    padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--panel); font-size: 14px; color: var(--text);
+  }
+  .video { margin: 8px auto 0; max-width: 640px; }
+  video {
+    display: block; width: 100%; aspect-ratio: 1 / 1; background: #000;
+    border: 1px solid var(--line); border-radius: 14px;
+  }
+  .caption { margin: 10px 0 0; text-align: center; color: var(--muted); font-size: 14px; }
+  section { padding: 40px 0 0; }
+  h2 { margin: 0 0 14px; font-size: 26px; letter-spacing: -.01em; }
+  .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li {
+    position: relative; margin: 0 0 10px; padding: 12px 14px 12px 52px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    counter-increment: step;
+  }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 14px; top: 12px;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent); color: var(--bg);
+    font-weight: 700; font-size: 14px; line-height: 26px; text-align: center;
+  }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); font-size: 16px; }
+  th, td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+  td:first-child { color: var(--warm); font-weight: 600; width: 46%; }
+  .note { color: var(--muted); font-size: 15px; margin: 10px 0 0; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  figure img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+  figcaption { padding: 10px 12px 12px; font-size: 15px; color: var(--muted); }
+  figcaption strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 2px; }
+  ul.facts { margin: 0; padding-left: 20px; }
+  ul.facts li { margin: 0 0 8px; }
+  a { color: var(--accent); }
+  footer { padding: 48px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Meta VR Start Developer Competition 2026</p>
+    <h1>MarketScout</h1>
+    <p class="lede">Explore 3,939 public companies as planets in a universe you shape with your hands. A seated research tool for Meta Quest.</p>
+    <div class="badges">
+      <span class="badge">Hands only, no controllers needed</span>
+      <span class="badge">Play seated</span>
+      <span class="badge">Meta Quest</span>
+    </div>
+  </header>
+
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="media/poster.jpg" src="media/walkthrough.mp4">
+      <a href="media/walkthrough.mp4">Download the walkthrough video</a>
+    </video>
+    <p class="caption" id="rec-caption">Latest walkthrough, recorded inside the headset with hands only. No sound.</p>
+  </div>
+
+  <section>
+    <h2>Try it in a minute</h2>
+    <ol class="steps">
+      <li>Sit down and put the controllers aside.</li>
+      <li>Open MarketScout. While the universe loads, a guide shows each gesture.</li>
+      <li>When it says “Please clap your hands together”, clap once. Then spread your hands to unfold the universe.</li>
+      <li>Look at a galaxy, turn your right palm up and curl your fingers. The ring around the cursor fills as you curl, and the galaxy is selected.</li>
+      <li>Clap and spread your hands to bring that galaxy close.</li>
+      <li>Touch a planet with your fingertip to open that company’s dashboards. Sweep your hand to the left over a card to turn it.</li>
+      <li>Turn your left palm up and curl your fingers to go back. Look down to the ribbon for Search, Analysis and Portfolio.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Hand controls</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Do this</th><th>To</th></tr></thead>
+        <tbody>
+          <tr><td>Clap once</td><td>Take hold of the universe, or of the selected galaxy</td></tr>
+          <tr><td>Spread or squeeze both hands</td><td>Zoom in or out</td></tr>
+          <tr><td>Swing or roll both hands</td><td>Rotate</td></tr>
+          <tr><td>Close a hand, or drop your hands</td><td>Let go. The view stays where you left it</td></tr>
+          <tr><td>Look at something, then curl your right palm</td><td>Select it</td></tr>
+          <tr><td>Touch a planet with your fingertip</td><td>Select that company</td></tr>
+          <tr><td>Curl your left palm</td><td>Go back</td></tr>
+          <tr><td>Sweep a hand left over a dashboard</td><td>Turn to the next card</td></tr>
+          <tr><td>Tap a ribbon key with your fingertip</td><td>Back, Explore, Search, Analysis, Portfolio, Layers, Settings, More</td></tr>
+          <tr><td>Hold the Meta button</td><td>Bring the scene back in front of you</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Controllers also work, but nothing in the app needs them.</p>
+  </section>
+
+  <section>
+    <h2>What you’re looking at</h2>
+    <div class="gallery">
+      <figure>
+        <img src="media/universe.jpg" alt="Galaxies of companies floating around the viewer's hand" loading="lazy" width="768" height="768">
+        <figcaption><strong>The universe</strong>Each bubble is a galaxy of related companies, and each planet in it is one company. Two small plots show what the selected galaxy offers and needs.</figcaption>
+      </figure>
+      <figure>
+        <img src="media/dashboards.jpg" alt="Company dashboards with price charts arranged around a planet" loading="lazy" width="768" height="768">
+        <figcaption><strong>Company dashboards</strong>Select a planet and its dashboards open around it, with price charts and comparisons with peers. Sweep a hand to turn each card.</figcaption>
+      </figure>
+      <figure>
+        <img src="media/portfolio.jpg" alt="Portfolio panel with account equity and holdings" loading="lazy" width="768" height="768">
+        <figcaption><strong>Portfolio</strong>Reads a paper-trading account (no real money): equity, holdings and history, with each holding linked to its planet.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it’s built</h2>
+    <ul class="facts">
+      <li>Made in Unity 6 for Meta Quest, using hand tracking.</li>
+      <li>The universe is a fixed snapshot of 3,939 companies in 239 galaxies, built into the app.</li>
+      <li>Each planet’s land, oceans, mountains and trenches come from the company’s financial filings with the SEC (10-K and 10-Q).</li>
+      <li>The Portfolio reads a live Alpaca paper-trading account over Wi-Fi. It is read-only.</li>
+      <li>The workspace sits in front of you, so you never need to stand or turn around.</li>
+      <li>The ambient music is original. Visuals use Space Graphics Planets, Shapes and All In 1 VFX from the Unity Asset Store.</li>
+    </ul>
+  </section>
+
+  <footer>MarketScout (Network Universe) · Entry for the Meta VR Start Developer Competition 2026</footer>
+</div>
+<script>
+  fetch('media/recording.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.recordedUtc) return;
+      var when = new Date(d.recordedUtc).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      var secs = d.seconds ? ', ' + d.seconds + ' seconds' : '';
+      document.getElementById('rec-caption').textContent =
+        'Latest walkthrough, recorded inside the headset with hands only on ' + when + secs + '. No sound.';
+    })
+    .catch(function () {});
+</script>
+</body>
+</html>
